@@ -52,6 +52,11 @@ struct ContentView: View {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
 
         let group = DispatchGroup()
+        
+        let lastName = "Marcelino"
+        let firstName = "Soren"
+        
+        var userData: [String: Any] = ["lastname": lastName, "firstname": firstName]
 
         for selectedRow in selectedCategories {
             group.enter()
@@ -66,7 +71,7 @@ struct ContentView: View {
                     if let error = error {
                         print("Error fetching heart data: \(error)")
                     } else if let heartData = heartData {
-                        if let jsonString = JSONFormatter.formatAndSortJSON(heartData, dateFormatter: dateFormatter) {
+                        if let jsonString = JSONFormatter.formatAndSortJSON(heartData, dateFormatter: dateFormatter, additionalData: userData) {
                             print("Formatted and sorted Heart Data:\n\(jsonString)")
                         }
                     }
