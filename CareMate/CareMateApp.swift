@@ -8,7 +8,7 @@ struct HealthkitIntegrationApp: App {
     private let healthStore: HKHealthStore
     
     init() {
-        guard HKHealthStore.isHealthDataAvailable() else {  fatalError("This app requires a device that supports HealthKit") }
+        guard HKHealthStore.isHealthDataAvailable() else { fatalError("This app requires a device that supports HealthKit") }
         healthStore = HKHealthStore()
         requestHealthkitPermissions()
     }
@@ -17,6 +17,7 @@ struct HealthkitIntegrationApp: App {
         
         let sampleTypesToRead = Set([
             HKObjectType.quantityType(forIdentifier: .heartRate)!,
+            HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
             HKObjectType.quantityType(forIdentifier: .stepCount)!,
             HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!,
         ])

@@ -10,6 +10,7 @@
 		B317A51A2B0ACD850002931D /* GetHeartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317A5192B0ACD850002931D /* GetHeartData.swift */; };
 		B317A51C2B0ACD8B0002931D /* GetSleepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317A51B2B0ACD8B0002931D /* GetSleepData.swift */; };
 		B317A51E2B0ACD8F0002931D /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317A51D2B0ACD8F0002931D /* JSONFormatter.swift */; };
+		B3636DD62B0B7A350074CE66 /* JSONHeartRateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3636DD52B0B7A350074CE66 /* JSONHeartRateFormatter.swift */; };
 		B3F9DCE02B02A2B300756B26 /* CareMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F9DCDF2B02A2B300756B26 /* CareMateApp.swift */; };
 		B3F9DCE22B02A2B300756B26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F9DCE12B02A2B300756B26 /* ContentView.swift */; };
 		B3F9DCE42B02A2B400756B26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F9DCE32B02A2B400756B26 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		B317A51B2B0ACD8B0002931D /* GetSleepData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSleepData.swift; sourceTree = "<group>"; };
 		B317A51D2B0ACD8F0002931D /* JSONFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
 		B317A5222B0ACF550002931D /* CareMate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CareMate.entitlements; sourceTree = "<group>"; };
+		B3636DD52B0B7A350074CE66 /* JSONHeartRateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHeartRateFormatter.swift; sourceTree = "<group>"; };
 		B3F9DCDC2B02A2B300756B26 /* CareMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F9DCDF2B02A2B300756B26 /* CareMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareMateApp.swift; sourceTree = "<group>"; };
 		B3F9DCE12B02A2B300756B26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				B317A51D2B0ACD8F0002931D /* JSONFormatter.swift */,
 				B3F9DCE32B02A2B400756B26 /* Assets.xcassets */,
 				B3F9DCE52B02A2B400756B26 /* Preview Content */,
+				B3636DD52B0B7A350074CE66 /* JSONHeartRateFormatter.swift */,
 			);
 			path = CareMate;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B317A51C2B0ACD8B0002931D /* GetSleepData.swift in Sources */,
+				B3636DD62B0B7A350074CE66 /* JSONHeartRateFormatter.swift in Sources */,
 				B317A51A2B0ACD850002931D /* GetHeartData.swift in Sources */,
 				B3F9DCE22B02A2B300756B26 /* ContentView.swift in Sources */,
 				B317A51E2B0ACD8F0002931D /* JSONFormatter.swift in Sources */,

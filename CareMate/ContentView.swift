@@ -57,22 +57,44 @@ struct ContentView: View {
         let firstName = "Soren"
         
         var userData: [String: Any] = ["lastname": lastName, "firstname": firstName]
-
+        
         for selectedRow in selectedCategories {
             group.enter()
 
             if selectedRow == "Heart" {
                 let heartDataFetcher = GetHeartData()
-                heartDataFetcher.getHeartData { (heartData, error) in
+                var tasksCompleted = 0 // Conter for completed tasks
+                
+                heartDataFetcher.getHeartRateData { (heartRate, error) in
                     defer {
-                        group.leave()
+                        tasksCompleted += 1
+                        if tasksCompleted == 2 {
+                            group.leave()
+                        }
                     }
 
                     if let error = error {
                         print("Error fetching heart data: \(error)")
-                    } else if let heartData = heartData {
-                        if let jsonString = JSONFormatter.formatAndSortJSON(heartData, dateFormatter: dateFormatter, additionalData: userData) {
+                    } else if let heartRate = heartRate {
+                        if let jsonString = JSONHeartRateFormatter.formatHeartRateData(heartRate, dateFormatter: dateFormatter) {
                             print("Formatted and sorted Heart Data:\n\(jsonString)")
+                        }
+                    }
+                }
+                
+                heartDataFetcher.getHeartRateVariabilityData { (heartRateVariability, error) in
+                    defer {
+                        tasksCompleted += 1
+                        if tasksCompleted == 2 {  // Check if both tasks are completed
+                            group.leave()
+                        }
+                    }
+
+                    if let error = error {
+                        print("Error fetching heart data: \(error)")
+                    } else if let heartRateVariability = heartRateVariability {
+                        if let jsonString = JSONHeartRateFormatter.formatHeartRateData(heartRateVariability, dateFormatter: dateFormatter) {
+                            print("Formatted and sorted Heart Data Variability:\n\(jsonString)")
                         }
                     }
                 }
