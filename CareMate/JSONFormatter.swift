@@ -12,12 +12,12 @@ class JSONFormatter {
         var jsonData: [String: Any] = [:]
         
         // Include additional data under "user" key if available
-        if let additionalData = additionalData {
+        /*if let additionalData = additionalData {
             jsonData["user"] = additionalData
         } else {
             print("Error: Last name or first name is missing.")
             return nil
-        }
+        }*/
         
         var dataPoints: [[String: Any]] = []
         
@@ -26,14 +26,6 @@ class JSONFormatter {
                 let dataPoint: [String: Any] = ["x": dateFormatter.string(from: date), "y": value]
                 dataPoints.append(dataPoint)
             }
-        }
-        
-        // Sort jsonData based on "x" values (dates) in descending order
-        dataPoints.sort { (dict1, dict2) -> Bool in
-            if let date1 = dateFormatter.date(from: dict1["x"] as! String), let date2 = dateFormatter.date(from: dict2["x"] as! String) {
-                return date1 > date2
-            }
-            return false
         }
         
         // Add sorted dataPoints under "data" key

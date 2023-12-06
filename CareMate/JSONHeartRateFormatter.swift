@@ -28,7 +28,9 @@ class JSONHeartRateFormatter {
         
         // Convert jsonData to formatted JSON string
         if let formattedText = try? JSONSerialization.data(withJSONObject: jsonData, options: .prettyPrinted),
-           let jsonString = String(data: formattedText, encoding: .utf8) {
+           var jsonString = String(data: formattedText, encoding: .utf8) {
+            
+            jsonString = "\"heart_rate\": \(jsonString)"
             return jsonString
         }
         

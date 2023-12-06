@@ -97,6 +97,8 @@
 			dependencies = (
 			);
 			name = CareMate;
+			packageProductDependencies = (
+			);
 			productName = CareMate;
 			productReference = B3F9DCDC2B02A2B300756B26 /* CareMate.app */;
 			productType = "com.apple.product-type.application";
@@ -125,6 +127,8 @@
 				Base,
 			);
 			mainGroup = B3F9DCD32B02A2B300756B26;
+			packageReferences = (
+			);
 			productRefGroup = B3F9DCDD2B02A2B300756B26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
